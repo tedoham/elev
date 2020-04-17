@@ -1,0 +1,44 @@
+---
+title: Daily Briefing 
+layout: base.njk
+pagination:
+    data: news
+    size: 1
+    alias: news
+permalink: /{{ news.country }}/index.html
+---
+
+<div class="container">
+    <h1>This is my page</h1>
+    <p>Well im trying to render home page or aka index.njk</p>
+
+    <ul>
+        {% for article in news.articles %}
+        <li>
+            <h2>
+                <a href="{{ article.url }}"> {{ article.title }}</a>
+                <span
+                    >{{ article.source.name }} -
+                    <time>{{ article.publishedAt }}</time></span
+                >
+            </h2>
+            {{ article.title }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    {# <ul>
+        {% for article in testt.articles %}
+        <li>
+            <h2>
+                <a href="{{ article.title }}"> {{ article.title }}</a>
+                <span
+                    >{{ article.title }} -
+                    <time>{{ article.title }}</time></span
+                >
+            </h2>
+            {{ article.title }}
+        </li>
+        {% endfor %}
+    </ul> #}
+</div>
