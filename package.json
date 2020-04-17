@@ -1,16 +1,17 @@
 {
-    "name": "11y",
-    "version": "1.0.0",
-    "description": "Static site generator using eleventy",
-    "main": "index.js",
-    "scripts": {
-        "start": "eleventy --serve",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@11ty/eleventy": "^0.10.0"
-    }
+  "name": "11y",
+  "version": "1.0.0",
+  "description": "Static site generator using eleventy",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
 }
