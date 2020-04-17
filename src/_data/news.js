@@ -1,9 +1,9 @@
-import { get } from 'axios';
+const axios = require('axios');
 require('dotenv').config();
 
-export default async function() {
+module.exports = async function() {
   try {
-    const response = await get(
+    const response = await axios.get(
       `http://newsapi.org/v2/everything?q=bitcoin&from=2020-03-17&sortBy=publishedAt&apiKey=${process.env.API_KEY}`
     );
     console.log(response);
@@ -11,4 +11,4 @@ export default async function() {
   } catch (error) {
     console.error(error);
   }
-}
+};
